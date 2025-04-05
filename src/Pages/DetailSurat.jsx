@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import parse from "html-react-parses";
+import parse from "html-react-parser";
 
 const DetailSurat = ( ) => {
     const {id} = useParams(); //ambil parameter dari URL
@@ -38,7 +38,7 @@ const DetailSurat = ( ) => {
                     <ul className="list-group">
                         {surat.ayat.map((ayat) => (
                             <li
-                                className="list-group-item d-flex justify-content-between align-items-center arabic-text"
+                                className="list-group-item d-flex justify-content-between align-items-center"
                                 key={ayat.nomorAyat}
                             >
                                 {ayat.teksArab}
